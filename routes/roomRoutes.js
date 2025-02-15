@@ -1,7 +1,7 @@
 const express = require('express');
 const {getAllRooms, addRoom, updateRoom, deleteRoom} = require('../controllers/roomController');
 const authenticateToken = require('../middlewares/authMiddleware');
-//Router
+
 const router = express.Router();
 router.get('/rooms', authenticateToken, getAllRooms);
 router.post('/rooms', addRoom);
